@@ -1,0 +1,151 @@
+.home-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header-result {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hangman-figure {
+  position: relative;
+}
+
+.hangman-foundation {
+  height: 10px;
+  width: 250px;
+  background: #000;
+}
+.hangman-stick {
+  height: 400px;
+  width: 10px;
+  background: #000;
+  margin-left: 120px;
+}
+.hangman-top {
+  height: 10px;
+  width: 200px;
+  background: #000;
+  margin-left: 120px;
+}
+.hangman-hang {
+  height: 50px;
+  width: 10px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.man-head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid #000;
+  position: absolute;
+  top: 50px;
+  right: -30px;
+}
+.man-body {
+  width: 10px;
+  height: 100px;
+  background: #000;
+  position: absolute;
+  top: 120px;
+  right: 0px;
+}
+.man-right-arm {
+  width: 100px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  top: 150px;
+  right: -100px;
+  rotate: -30deg;
+  transform-origin: bottom left;
+}
+.man-left-arm {
+  width: 100px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  rotate: 30deg;
+  transform-origin: bottom right;
+}
+.man-right-leg {
+  width: 100px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  top: 210px;
+  right: -90px;
+  rotate: 60deg;
+  transform-origin: left bottom;
+}
+.man-left-leg {
+  width: 100px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  top: 210px;
+  right: 0px;
+  rotate: -60deg;
+  transform-origin: right bottom;
+}
+
+.word-container {
+  display: flex;
+  gap: .25em;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.letter-span {
+  border-bottom: .1em solid #000;
+}
+
+.keyboard-container {
+  align-self: stretch;
+}
+
+.keyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: .5rem;
+}
+
+.keyboard-btn {
+  width: 100%;
+  color: #000;
+  border: 2px solid #000;
+  background: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  aspect-ratio: 1 / 1;
+  text-transform: uppercase;
+  padding: .5rem;
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.keyboard-btn.active {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+.keyboard-btn.inactive {
+  opacity: .4;
+}
+
+.keyboard-btn:hover:not(:disabled), .keyboard-btn:focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
+}

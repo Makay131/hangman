@@ -17,15 +17,16 @@ const LeftLeg = (
   <div className="man-left-leg"></div>
 )
 
-export default function HangmanFigure() {
+const hangman = [Head, Body, RightArm, LeftArm, RightLeg ,LeftLeg]
+
+type HangmanFigureProps = {
+  wrongAnswerIndex: number,
+}
+
+export default function HangmanFigure({wrongAnswerIndex}: HangmanFigureProps) {
   return (
     <div className="hangman-figure">
-      {Head}
-      {Body}
-      {RightArm}
-      {LeftArm}
-      {RightLeg}
-      {LeftLeg}
+      {hangman.slice(0, wrongAnswerIndex)}
       <div className="hangman-hang"></div>
       <div className="hangman-top"></div>
       <div className="hangman-stick"></div>

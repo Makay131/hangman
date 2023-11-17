@@ -139,13 +139,30 @@
 }
 
 .keyboard-btn.active {
-  background-color: hsl(200, 100%, 50%);
+  background-color: hsl(200, 100%, 40%);
   color: white;
 }
 .keyboard-btn.inactive {
   opacity: .4;
 }
 
-.keyboard-btn:hover:not(:disabled), .keyboard-btn:focus:not(:disabled) {
+.keyboard-btn:hover:not(:disabled) {
   background-color: hsl(200, 100%, 75%);
+}
+
+.reset-btn {
+  padding: 8px 14px;
+  font-size: 1.2rem;
+  background-color: hsl(200, 100%, 40%);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid hsl(200, 100%, 40%);
+
+  transition: all .4s ease;
+}
+.reset-btn:hover {
+  background: none;
+  color: hsl(200, 100%, 40%);
 }

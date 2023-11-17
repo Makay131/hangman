@@ -1,5 +1,7 @@
+import { ReactNode } from "react"
+
 type HeaderProps = {
-    children: string,
+    children: ReactNode,
 }
 export default function Header({children}: HeaderProps) {
   return (
